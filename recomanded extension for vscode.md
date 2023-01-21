@@ -2,7 +2,7 @@
 id: 1dbfwp1kwxrjtgl4tkuj10k
 title: Vscode Extension
 desc: ""
-updated: 1674307291238
+updated: 1674307490300
 created: 1674306759446
 ---
 
@@ -23,3 +23,4 @@ created: 1674306759446
 [GitBash]()<br>
 [Remote Explorer]()<br>
 [Laravel Extension Pack]()<br>
+[Laravel Blade Wrapper]()<br>
