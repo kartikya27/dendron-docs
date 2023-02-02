@@ -8,7 +8,7 @@ currentStep: 0
 totalSteps: 0
 ---
 
-## Customise Table Name
+### Customise Table Name
 
 ```php
 use Jenssegers\Mongodb\Eloquent\Model;
