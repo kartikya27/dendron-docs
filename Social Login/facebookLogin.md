@@ -78,3 +78,20 @@ class FacebookController extends Controller
 ```php 
  $user = Socialite::driver('google')->user();
  ```
+
+ ### Login Buttons
+
+***Facebook***
+```html
+<fb:login-button config_id="{config_id}" onlogin="checkLoginState();">
+</fb:login-button>
+```
+
+***Google***
+```html
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+```
+
+```html
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+```
