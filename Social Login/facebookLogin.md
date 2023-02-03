@@ -12,3 +12,13 @@ These credentials should be placed in your application's ``config/services.php``
         'redirect' => env('FACEBOOK_REDIRECT_URI')
     ],
 ```
+In ``routes/web.php``
+```php
+Route::prefix('auth')->group(function () {
+    ## // * For Facebook Login API
+    Route::prefix('facebook')->name('facebook.')->group(function () {
+        Route::get('login', [FacebookController::class, 'loginUsingFacebook']);
+        Route::get('login/callback', [FacebookController::class, 'callbackFromFacebook']);
+    });
+});
+```
