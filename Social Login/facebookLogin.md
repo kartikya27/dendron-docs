@@ -3,6 +3,14 @@
 ```composer 
 composer require laravel/socialite
 ```
+---
+
+**Testing Credintial**
+```.env
+FACEBOOK_CLIENT_ID="586547156655534"
+FACEBOOK_CLIENT_SECRET="b62ba606af4acea659213a56c59722fa"
+FACEBOOK_REDIRECT_URI="https://127.0.0.1:8000/auth/facebook/login/callback"
+```
 
 These credentials should be placed in your application's ``config/services.php``
 ```php 
