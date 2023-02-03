@@ -91,7 +91,7 @@ class FacebookController extends Controller
 ```html
 <div class="g-signin2" data-onsuccess="onSignIn"></div>
 ```
-
+**Include in html header file**
 ```html
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 ```
