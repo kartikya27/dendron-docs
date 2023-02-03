@@ -75,3 +75,6 @@ class FacebookController extends Controller
 ```
 
 ***Note:-*** For Google Login Change ``google`` driver name innted of ``facebook``
+```php 
+ $user = Socialite::driver('google')->user();
+ ```
