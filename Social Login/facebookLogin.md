@@ -22,3 +22,46 @@ Route::prefix('auth')->group(function () {
     });
 });
 ```
+
+In Facebook Controller
+```php 
+namespace App\Http\Controllers;
+
+use App\Exceptions\ErrorException;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Laravel\Socialite\Facades\Socialite;
+
+class FacebookController extends Controller
+{
+    public function loginUsingFacebook()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    public function callbackFromFacebook()
+    {
+        try {
+
+            $user = Socialite::driver('facebook')->user();
+
+            $saveUser = User::updateOrCreate([
+                'email' => $user->getEmail(),
+            ], [
+                'name' => $user->getName(),
+                'type' => "facebook",
+                'role' => "user",
+                'email' => $user->getEmail(),
+                'password' => Hash::make($user->getName() . '@' . $user->getId())
+            ]);
+
+            Auth::loginUsingId($saveUser->id);
+            return success("User Logged In")->response();
+        } catch (ErrorException $e) {
+            dd($e->getMessage());
+        }
+    }
+}
+
+```
