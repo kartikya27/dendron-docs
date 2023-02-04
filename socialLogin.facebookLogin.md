@@ -2,7 +2,7 @@
 id: sw0708q1bbv2m9lgtsoeo0u
 title: Facebook Login
 desc: ""
-updated: 1675491544439
+updated: 1675504680938
 created: 1675491348383
 ---
 
@@ -17,8 +17,8 @@ composer require laravel/socialite
 **Testing Credintial**
 
 ```.env
-FACEBOOK_CLIENT_ID="586547156655534"
-FACEBOOK_CLIENT_SECRET="b62ba606af4acea659213a56c59722fa"
+FACEBOOK_CLIENT_ID="500362448836300"
+FACEBOOK_CLIENT_SECRET="fff835a12545757a21d039e99c0fe2ce"
 FACEBOOK_REDIRECT_URI="https://127.0.0.1:8000/auth/facebook/login/callback"
 ```
 
@@ -96,14 +96,14 @@ class FacebookController extends Controller
 
 ### Login Buttons
 
-**_Facebook_**
+**_`Facebook`_**
 
 ```html
 <fb:login-button config_id="{config_id}" onlogin="checkLoginState();">
 </fb:login-button>
 ```
 
-**_Google_**
+**_`Google`_**
 
 ```html
 <div class="g-signin2" data-onsuccess="onSignIn"></div>
