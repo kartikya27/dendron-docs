@@ -2,7 +2,7 @@
 id: 6j6zy6no1onqejwwarm7jj3
 title: header Script For SendData
 desc: ""
-updated: 1676105992546
+updated: 1676110739702
 created: 1676105757676
 ---
 
@@ -11,7 +11,7 @@ created: 1676105757676
 **Place in header file of your page**
 
 ```js
-<script>
+ <script>
         // Place in header file of your page
         //* Sending all form data to one specified route to store data
         document.addEventListener('DOMContentLoaded', function() {
@@ -28,7 +28,7 @@ created: 1676105757676
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json",
-                                Accept: "application/json",
+                                "Accept": "application/json",
                             },
                             body: formDataJsonString
                         })
