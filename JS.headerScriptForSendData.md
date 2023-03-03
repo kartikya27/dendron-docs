@@ -2,7 +2,7 @@
 id: 6j6zy6no1onqejwwarm7jj3
 title: header Script For SendData
 desc: ""
-updated: 1676110739702
+updated: 1677830999426
 created: 1676105757676
 ---
 
@@ -39,4 +39,26 @@ created: 1676105757676
             });
         }, false);
     </script>
+```
+
+## Easy Way to submit data via Ajax or Jquary
+
+```js
+$(document).ready(function () {
+  $("#form_login").submit(function (event) {
+    var formData = {
+      password: $("#password").val(), // Geting form value
+    };
+    $.ajax({
+      type: "POST",
+      url: "/send-data", // Route of api or page where want to send data
+      data: formData, // Sending data in one variable
+      dataType: "json",
+      success: function (response) {
+        console.log(response); // Get Response in alert or in console
+      },
+    });
+    event.preventDefault(); // For Prevent Form load to other page
+  });
+});
 ```
